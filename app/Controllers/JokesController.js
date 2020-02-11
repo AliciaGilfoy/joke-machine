@@ -4,13 +4,16 @@ import store from "../store.js";
 
 //Private
 function _draw() {
-  let jokes = store.State.jokes
+  console.log(6)
+  let jokes = [store.State.jokes]
+  let jokeElem = document.getElementById("jokeArea")
   let template = ""
-  Array.from(jokes).forEach(j => {
-    template += j.Template
+
+  jokes.forEach(jo => {
+    template += jo.Template
   })
 
-  document.getElementById("joke-area").innerHTML = template
+  jokeElem.innerHTML = template
 
 }
 
@@ -23,4 +26,17 @@ export default class JokesController {
   getApiJoke() {
     JokesService.getApiJoke()
   }
+
+  getAnswer() {
+    JokesService.getAnswer()
+  }
+
+  voteFunny() {
+    JokesService.voteFunny()
+  }
+
+  voteLame() {
+    JokesService.voteLame()
+  }
+
 }

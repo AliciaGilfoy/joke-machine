@@ -21,24 +21,19 @@
             <div class="col-12 text-center h1">Joke Machine</div>
             <div class="col-12 text-center h3">Generate a random joke and let us know if it was funny or not.</div>
             <div class="col-12 counter-row">
-                <div class="col-4">Funny: <span id="funny-counter">0</span></div>
-                <div class="col-4">Lame: <span id="lame-counter">0</span></div>
+                <div class="col-4 h2 text-success"><i class="far fa-grin-squint-tears"></i> : <span
+                        id="funny-counter">0</span></div>
+                <div class="col-4 h2 text-danger"><i class="far fa-frown"></i> : <span id="lame-counter">0</span></div>
             </div>
         </div>
     </header>
     <main class="container-fluid">
-        <div class="row joke-row" id="joke-area">
-            <div class="col-12 text-center" id="text-area">
-                <button class="btn-success" onclick="app.jokesController.getApiJoke()">Make me laugh!</button>
-            </div>
-            <div class="col-12 button-row">
-                <button>Answer</button>
-                <button>Skip</button>
-            </div>
+        <div class="row joke-row" id="jokeArea">
+            <button class="btn-success" onclick="app.jokesController.getApiJoke()">Make me laugh!</button>
         </div>
     </main>
     <footer class="container-fluid">
-        <div class="col-12 my-footer">footer</div>
+        <div class="col-12 my-footer">Jokes provided by https://official-joke-api.appspot.com</div>
     </footer>
 
 
@@ -56,7 +51,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
         integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
-    <script src="./app/main.js" type="module"></script>
+    <script src="app/main.js" type="module"></script>
 </body>
 
 </html>

@@ -63,9 +63,11 @@ class Store {
    * @param {any} data
    */
   commit(prop, data) {
+    console.log(5)
     _validateProp(prop);
     _state[prop] = data;
     _listeners[prop].forEach(fn => fn());
+    console.log(7)
   }
 }
 
